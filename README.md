@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ProzorroUKR/ExtendedJournalHandler.svg?branch=master)](https://travis-ci.org/ProzorroUKR/ExtendedJournalHandler)
+[![Coverage Status](https://coveralls.io/repos/github/ProzorroUKR/ExtendedJournalHandler/badge.svg?branch=master)](https://coveralls.io/github/ProzorroUKR/ExtendedJournalHandler?branch=master)
 # ExtendedJournalHandler
 Python logging handler extending functionality of basic journal handler from python-systemd.
 
