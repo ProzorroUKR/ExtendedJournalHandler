@@ -22,7 +22,7 @@ class TestLogging(TestCase):
         j.seek_realtime(datetime.now() - timedelta(minutes=3))
         j.add_match(MESSAGE_ID=log_msg)
         for entry in j:
-            self.assertTrue(log_msg in entry['MESSAGE_ID'], entry)
+            self.assertTrue(log_msg in str(entry['MESSAGE_ID']))
             self.assertTrue('EXTRA' in entry, entry['EXTRA'] == 'foo')
             self.assertTrue('ANOTHER_EXTRA' in entry,
                             entry['ANOTHER_EXTRA'] == 'bar')

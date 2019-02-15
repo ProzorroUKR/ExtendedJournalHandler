@@ -23,7 +23,7 @@ from datetime import timedelta, datetime
 HERE = os.path.abspath(os.path.dirname(__file__))
 cfg_path = os.path.join(HERE, 'circus.ini')
 
-python = '/data/leits/circus_logging/bin/python'
+python = sys.executable
 
 
 def run_circusd(config=()):
@@ -51,7 +51,7 @@ def run_circusd(config=()):
     log_msg = "[INFO] circus_logger started"
 
     while True:
-        if log_msg in child.stdout.readline():
+        if log_msg in child.stdout.readline().decode():
             break
     child.kill()
 
